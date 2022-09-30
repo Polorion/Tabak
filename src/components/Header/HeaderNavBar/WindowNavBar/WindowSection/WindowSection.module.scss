@@ -1,0 +1,45 @@
+.body {
+  max-width: 350px;
+  margin-bottom: 40px;
+  padding: 10px;
+  margin-right: 30px;
+
+  .title {
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    a {
+      color: var(--lightblue);
+    }
+
+    .total {
+      color: var(--orange);
+      font-weight: 900;
+    }
+  }
+  .firma {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    margin-bottom: 30px;
+    .firmaItem {
+      font-size: 18px;
+      color: var(--grayfooter);
+      margin-bottom: 8px;
+      font-weight: 600;
+      display: flex;
+      padding: 0 10px;
+      p {
+        margin-right: 10px;
+      }
+      .total {
+        color: var(--orange);
+      }
+    }
+  }
+}
+
+.test {
+  width: 100%;
+  text-align: start;
+}

@@ -1,0 +1,12 @@
+.body {
+  background-color: var(--orange);
+  .list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .test {
+    height: 400px;
+    background-color: rgba(0, 0, 255, 0.44);
+    margin: 0px -10px;
+  }
+}

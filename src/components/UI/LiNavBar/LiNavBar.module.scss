@@ -1,0 +1,15 @@
+.li {
+  background-color: var(--orange);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--white);
+  padding: 10px 0;
+  .title {
+    margin-right: 5px;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,39 @@
+.footer {
+  .footerTop {
+    background-color: var(--gray);
+    .list {
+      display: flex;
+      justify-content: space-around;
+      .item {
+        cursor: pointer;
+        padding: 20px 0;
+        color: var(--white);
+        font-weight: 200;
+      }
+    }
+  }
+  .footerBottom {
+    color: var(--white);
+    background-color: var(--grayfooter);
+    font-size: 12px;
+    padding-top: 20px;
+    .bottomBody {
+      display: flex;
+      .column {
+        &:last-child {
+          display: flex;
+          justify-content: end;
+          p {
+            max-width: 200px;
+          }
+        }
+        padding: 0 20px;
+        flex: 0 0 33.33%;
+
+        p {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

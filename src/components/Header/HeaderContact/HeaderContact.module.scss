@@ -1,0 +1,15 @@
+.body {
+  display: flex;
+  padding: 20px 0;
+  .list {
+    display: flex;
+    margin-right: 20px;
+    border-right: 1px solid var(--black);
+    .item {
+      margin-right: 30px;
+    }
+  }
+  .time {
+    margin-right: auto;
+  }
+}

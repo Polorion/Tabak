@@ -1,0 +1,17 @@
+.body {
+  display: flex;
+  .star {
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    &.red {
+      svg {
+        fill: red;
+
+        .path {
+        }
+      }
+    }
+  }
+}

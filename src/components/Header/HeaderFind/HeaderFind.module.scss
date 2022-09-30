@@ -1,0 +1,73 @@
+.body {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  .logo {
+    width: 150px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .find {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    border: 1px solid var(--lightblue);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 50px;
+    width: 100%;
+    .select {
+      padding: 0px 10px 0 20px;
+      height: 100%;
+      border-right: 1px solid var(--lightblue);
+    }
+    .input {
+      height: 100%;
+      width: 100%;
+
+      input {
+        height: 100%;
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+  }
+  .basket {
+    align-items: center;
+    display: flex;
+    margin-right: 30px;
+    .infoBasket {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .sum {
+        font-size: 25px;
+      }
+    }
+    .imgBasket {
+      position: relative;
+      margin-right: 10px;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .basketCount {
+      position: absolute;
+      padding: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--lightblue);
+      top: -2.5px;
+      right: -5px;
+    }
+  }
+}

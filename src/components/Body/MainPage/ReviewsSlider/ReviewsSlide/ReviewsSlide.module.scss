@@ -1,0 +1,149 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  padding: 10px 10px 60px 10px;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    box-shadow: 0 0 14.25px 0.75px rgba(0, 0, 0, 0.15);
+  }
+  .infoItem {
+    text-align: center;
+    font-size: 25px;
+    padding: 0 20px;
+    margin-bottom: 90px;
+  }
+
+  .rewiewsBody {
+    display: flex;
+    .rewiewsImg {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      margin-right: 30px;
+      max-height: 100px;
+      img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+        border-top: 1px solid var(--black);
+        border-left: 1px solid var(--black);
+        border-right: 1px solid var(--black);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 30px;
+      }
+    }
+    .rewiewsinfo {
+      width: 70%;
+      max-height: 140px;
+      overflow: hidden;
+      position: relative;
+      &:before {
+        content: "";
+        left: 0;
+        top: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 60%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        z-index: 100;
+      }
+      div {
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        &:last-child {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  .btn {
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+  }
+}
+
+.bold {
+  font-weight: 900;
+}
+
+//
+//. {
+//  S . body
+//}
+//
+//{
+//}
+//. {
+//  S . infoItem
+//}
+//
+//{
+//}
+//. {
+//  S . rewiewsBody
+//}
+//
+//{
+//}
+//. {
+//  S . rewiewsImg
+//}
+//
+//{
+//}
+//. {
+//  S . rewiewsinfo
+//}
+//
+//{
+//}
+//. {
+//  S . who
+//}
+//
+//{
+//}
+//. {
+//  S . when
+//}
+//
+//{
+//}
+//. {
+//  S . exp
+//}
+//
+//{
+//}
+//. {
+//  S . dignity
+//}
+//
+//{
+//}
+//. {
+//  S . flaw
+//}
+//
+//{
+//}
+//. {
+//  S . impressoins
+//}
+//
+//{
+//}

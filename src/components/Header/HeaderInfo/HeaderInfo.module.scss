@@ -1,0 +1,17 @@
+.body {
+  background-color: var(--black);
+  color: var(--white);
+  .list {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    .item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+      &.last {
+        margin-right: auto;
+      }
+    }
+  }
+}
