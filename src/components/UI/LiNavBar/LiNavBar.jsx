@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import WindowNavBar from "../../Header/HeaderNavBar/WindowNavBar/WindowNavBar";
 
 const LiNavBar = (props) => {
-  const [isActive, setIsActive] = useState(false);
   const actionMouse = () => {
     props.setOpenOrClosedWindow(true);
   };

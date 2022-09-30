@@ -390,27 +390,28 @@ const HeaderNavBar = (props) => {
   const ref = useRef(null);
   const [cordinat, setCordinat] = useState(0);
 
-  const resize = () => {
-    const c = ref.current.getBoundingClientRect();
-    let scrolltop = document.body.scrollTop + c.top;
-    let scrollleft = document.body.scrollLeft + c.left;
-    setCordinat({ scrolltop, scrollleft });
-  };
-
   useEffect(() => {
+    const resize = () => {
+      const c = ref.current.getBoundingClientRect();
+      let scrolltop = window.scrollY + c.top;
+      let scrollleft = document.body.scrollLeft + c.left;
+      setCordinat({ scrolltop, scrollleft });
+    };
     window.addEventListener("resize", resize);
+    window.addEventListener("scroll", resize);
 
     return () => {
       window.addEventListener("resize", resize);
+      window.addEventListener("scroll", resize);
     };
-  }, []);
+  }, [props.openWindowNavBar]);
 
   useEffect(() => {
     const c = ref.current.getBoundingClientRect();
-    let scrolltop = document.body.scrollTop + c.top;
+    let scrolltop = window.scrollY + c.top;
     let scrollleft = document.body.scrollLeft + c.left;
     setCordinat({ scrolltop, scrollleft });
-  }, [props.openWindowNavBar]);
+  }, []);
 
   return (
     <div className={`${S.body} container`}>

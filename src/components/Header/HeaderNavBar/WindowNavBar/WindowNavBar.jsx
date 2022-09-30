@@ -14,7 +14,7 @@ const WindowNavBar = (props) => {
   return ReactDOM.createPortal(
     <div
       style={{
-        top: `${props.cordinat.scrolltop + 43}px`,
+        top: `${props.cordinat.scrolltop + 42}px`,
         left: `${props.cordinat.scrollleft - 10}px`,
       }}
       className={`${S.body} `}
