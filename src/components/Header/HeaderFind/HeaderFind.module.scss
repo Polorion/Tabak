@@ -35,39 +35,4 @@
       }
     }
   }
-  .basket {
-    align-items: center;
-    display: flex;
-    margin-right: 30px;
-    .infoBasket {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      .sum {
-        font-size: 25px;
-      }
-    }
-    .imgBasket {
-      position: relative;
-      margin-right: 10px;
-      svg {
-        width: 30px;
-        height: 30px;
-      }
-    }
-    .basketCount {
-      position: absolute;
-      padding: 8px;
-      width: 10px;
-      height: 10px;
-      border-radius: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--lightblue);
-      top: -2.5px;
-      right: -5px;
-    }
-  }
 }

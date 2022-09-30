@@ -1,7 +1,6 @@
 import * as React from "react";
 import S from "./HeaderNavBar.module.scss";
 import LiNavBar from "../../UI/LiNavBar/LiNavBar";
-import WindowNavBar from "./WindowNavBar/WindowNavBar";
 import { useEffect, useRef, useState } from "react";
 import GeneratorRandomString from "../../../utils/GeneratorRandomString";
 

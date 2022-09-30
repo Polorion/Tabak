@@ -1,21 +1,64 @@
 import * as React from "react";
 import S from "./HeaderInfo.module.scss";
+import { NavLink } from "react-router-dom";
 
+const items = [
+  {
+    title: "Адреса Магазинов",
+    path: "adress_magazin",
+  },
+  {
+    title: "Как заказать",
+    path: "zakazat",
+  },
+  {
+    title: "Оплата",
+    path: "oplata",
+  },
+  {
+    title: "Получение",
+    path: "polyshenie",
+  },
+  {
+    title: "Помощь",
+    path: "help",
+  },
+  {
+    title: "Гарантия и возврат",
+    path: "garantia",
+  },
+  {
+    title: "Отзовы",
+    path: "otziv",
+  },
+  {
+    title: "О компании",
+    path: "compani",
+  },
+  {
+    title: "Блог",
+    path: "blog",
+  },
+  {
+    title: "Вакансии",
+    path: "vakansi",
+  },
+];
 const HeaderInfo = () => {
   return (
     <div className={S.body}>
       <div className={`${S.bodyContainer} container`}>
         <ul className={S.list}>
-          <li className={S.item}>Адреса Магазинов</li>
-          <li className={S.item}>Как заказать</li>
-          <li className={S.item}>Оплата</li>
-          <li className={S.item}>Получение</li>
-          <li className={S.item}>Помощь</li>
-          <li className={S.item}>Гарантия и возврат</li>
-          <li className={S.item}>Отзовы</li>
-          <li className={S.item}>О компании</li>
-          <li className={`${S.item} ${S.last}`}>Блог</li>
-          <li className={S.item}>Вакансии</li>
+          {items.map((el, i) => {
+            return (
+              <NavLink
+                className={`${S.item} ${i === 8 && S.last}`}
+                to={`${el.path}`}
+              >
+                {el.title}
+              </NavLink>
+            );
+          })}
         </ul>
       </div>
     </div>

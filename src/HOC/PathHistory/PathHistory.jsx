@@ -6,9 +6,22 @@ import GeneratorRandomString from "../../utils/GeneratorRandomString";
 
 const PathHistory = ({ children }) => {
   const location = useLocation();
-  const paths = location.pathname.split("/").filter((el) => el !== "" && el);
-  const lastPath = paths[paths.length - 1];
+  let paths = location.pathname.split("/").filter((el) => el !== "" && el);
   let path = "";
+
+  const reName = [
+    { name: "sigaret", reName: "Сигареты" },
+    { name: "basket", reName: "Карзина" },
+  ];
+  paths = paths.map((el) => {
+    return reName.map((elRe) => {
+      if (el === elRe.name) {
+        return elRe.reName;
+      }
+    });
+  });
+  const lastPath = paths[paths.length - 1];
+
   return (
     <div>
       <div className={S.body}>

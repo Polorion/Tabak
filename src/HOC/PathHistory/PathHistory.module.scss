@@ -1,6 +1,10 @@
 .body {
+  background-color: var(--ligthgray);
   display: flex;
   justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 -10px;
   .item {
     margin-right: 15px;
     font-size: 30px;

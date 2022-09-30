@@ -1,0 +1,18 @@
+.controlBtns {
+  margin-bottom: 30px;
+  display: flex;
+  button {
+    border-radius: 10px;
+    padding: 10px 15px;
+  }
+  .btn {
+  }
+  button {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+  }
+}

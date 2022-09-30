@@ -1,12 +1,23 @@
 .body {
   display: flex;
   padding: 20px 0;
+  font-size: 20px;
+  a {
+    font-weight: 700;
+    color: var(--orange);
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: var(--black);
+    }
+  }
   .list {
     display: flex;
     margin-right: 20px;
     border-right: 1px solid var(--black);
     .item {
       margin-right: 30px;
+      color: var(--black);
     }
   }
   .time {

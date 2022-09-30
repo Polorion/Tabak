@@ -24,7 +24,7 @@ const LiNavBar = (props) => {
       <div className={S.title}>{props.title}</div>
       <div>{props.img && <Img />}</div>
 
-      {props.openWindowNavBar && (
+      {false && (
         <WindowNavBar
           cordinat={props.cordinat}
           section={props.section}

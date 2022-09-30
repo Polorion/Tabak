@@ -3,6 +3,7 @@ import logo from "../../../assets/img/logo.png";
 import { ReactComponent as Basket } from "../../../assets/img/basket.svg";
 import S from "./HeaderFind.module.scss";
 import MyButton from "../../UI/MyButton/MyButton";
+import HeaderBasket from "./HeaderBasket/HeaderBasket";
 
 const HeaderFind = () => {
   return (
@@ -20,16 +21,7 @@ const HeaderFind = () => {
           <input type="text" placeholder={"поиск товаров"} />
         </div>
       </div>
-      <div className={S.basket}>
-        <div className={S.imgBasket}>
-          <Basket />
-          <div className={S.basketCount}>0</div>
-        </div>
-        <div className={S.infoBasket}>
-          <p className={S.sum}>Сумма</p>
-          <div className={S.totalPrice}>0p</div>
-        </div>
-      </div>
+      <HeaderBasket />
       <div className={S.btnLogin}>
         <MyButton title={"Login"} />
       </div>
