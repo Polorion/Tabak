@@ -1,0 +1,38 @@
+.rightBasket {
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 10px;
+  .body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .price {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .total {
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .findAnyMarket {
+      color: var(--orange);
+      font-size: 16px;
+      flex: 1 1 auto;
+    }
+  }
+  .buy {
+    button {
+      width: 100%;
+    }
+  }
+  .body {
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,6 +1,6 @@
 import * as React from "react";
 import S from "./Catalog.module.scss";
-import PathHistory from "../../../HOC/PathHistory/PathHistory";
+import PathHistory from "../PathHistory/PathHistory";
 
 const Catalog = () => {
   return (

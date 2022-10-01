@@ -5,44 +5,6 @@
   .body {
     display: flex;
   }
-  .rightBasket {
-    margin-top: 66px;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white);
-    border-radius: 10px;
-    padding: 10px;
-    .body {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      .price {
-        margin-bottom: 20px;
-        font-size: 20px;
-        font-weight: 700;
-      }
-      .total {
-        font-size: 22px;
-        font-weight: 900;
-        margin-bottom: 10px;
-      }
-      .findAnyMarket {
-        color: var(--orange);
-        font-size: 16px;
-        flex: 1 1 auto;
-      }
-    }
-    .buy {
-      button {
-        width: 100%;
-      }
-    }
-    .body {
-      padding: 10px 10px 0 10px;
-      display: flex;
-      flex-direction: column;
-    }
-  }
   .title {
     text-align: center;
     font-size: 30px;
@@ -75,67 +37,6 @@
         }
         .inviz {
           flex: 0 0 10%;
-        }
-      }
-      .bodyTable {
-        display: flex;
-        background-color: var(--white);
-        align-items: center;
-        padding: 30px 50px 30px 30px;
-
-        .item {
-          flex: 0 0 50%;
-          display: flex;
-          .itemInfo {
-            .infoTitle {
-              font-size: 18px;
-              margin-bottom: 20px;
-            }
-            .infoArticle {
-              font-size: 10px;
-            }
-          }
-          .itemImg {
-            margin-right: 10px;
-            flex: 0 0 30%;
-            width: 100%;
-            height: 100px;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
-        }
-        .price {
-          display: flex;
-          padding-left: 10px;
-          flex: 0 0 10%;
-        }
-        .count {
-          flex: 0 0 20%;
-          display: flex;
-          align-items: baseline;
-          .btn {
-            padding: 4px 8px;
-            outline: 1px solid var(--lightblue);
-            outline-offset: 2px;
-            background-color: var(--lightblue);
-          }
-          .countItem {
-            margin: 0 10px;
-          }
-        }
-        .total {
-          flex: 0 0 10%;
-        }
-        .helpBtn {
-          flex: 0 0 10%;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          button {
-            margin-bottom: 10px;
-          }
         }
       }
     }

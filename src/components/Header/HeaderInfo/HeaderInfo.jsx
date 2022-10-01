@@ -1,6 +1,7 @@
 import * as React from "react";
 import S from "./HeaderInfo.module.scss";
 import { NavLink } from "react-router-dom";
+import GeneratorRandomString from "../../../utils/GeneratorRandomString";
 
 const items = [
   {
@@ -52,6 +53,7 @@ const HeaderInfo = () => {
           {items.map((el, i) => {
             return (
               <NavLink
+                key={GeneratorRandomString()}
                 className={`${S.item} ${i === 8 && S.last}`}
                 to={`${el.path}`}
               >

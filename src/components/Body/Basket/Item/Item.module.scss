@@ -1,0 +1,69 @@
+.bodyTable {
+  display: flex;
+  background-color: var(--white);
+  align-items: center;
+  padding: 30px 50px 30px 30px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .item {
+    flex: 0 0 50%;
+    display: flex;
+    .itemInfo {
+      .infoTitle {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .infoArticle {
+        font-size: 10px;
+      }
+    }
+    .itemImg {
+      margin-right: 10px;
+      flex: 0 0 30%;
+      width: 100%;
+      height: 100px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .price {
+    display: flex;
+    padding-left: 10px;
+    flex: 0 0 10%;
+  }
+  .count {
+    flex: 0 0 20%;
+    display: flex;
+    align-items: baseline;
+    .btn {
+      padding: 4px 8px;
+      outline: 1px solid var(--lightblue);
+      outline-offset: 2px;
+      background-color: var(--lightblue);
+    }
+    .countItem {
+      margin: 0 10px;
+    }
+  }
+  .total {
+    flex: 0 0 10%;
+  }
+  .helpBtn {
+    flex: 0 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    svg {
+      path {
+        fill: var(--white);
+      }
+    }
+    button {
+      margin-bottom: 10px;
+    }
+  }
+}
