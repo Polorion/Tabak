@@ -47,7 +47,7 @@ const Basket = (props) => {
               })}
             </div>
           </div>
-          <BasketTotal />
+          <BasketTotal  />
         </div>
       </div>
     </PathHistory>

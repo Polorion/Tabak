@@ -4,8 +4,9 @@ import BodySlider from "./BodySlider/BodySlider";
 import ItemSlider from "./ItemSlider/ItemSlider";
 import ReviewsSlider from "./ReviewsSlider/ReviewsSlider";
 import Manufacturers from "./ManufacturersSlider/Manufacturers";
+import TotalPriceBasket from "../../../HOC/TotalPriceBasket/TotalPriceBasket";
 
-const MainPage = () => {
+const MainPage = (props) => {
   return (
     <div className={S.body}>
       <BodySlider />
@@ -20,4 +21,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default MainPage

@@ -8,7 +8,7 @@ import BasketContainer from "./Basket/BasketContainer";
 const Body = () => {
   return (
     <Routes>
-      <Route path={"/qw"} element={<MainPage />}></Route>
+      <Route path={"/"} element={<MainPage />}></Route>
       <Route path={"/sigaret"} element={<Catalog />}></Route>
       <Route path={"/basket"} element={<BasketContainer />} />
     </Routes>

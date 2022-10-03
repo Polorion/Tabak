@@ -10,6 +10,7 @@ import {
 
 const BasketContainer = (props) => {
 
+
   const setCountActive = (id, t) => {
     props.SetCountItemActive(id, t);
   };
@@ -44,6 +45,7 @@ const BasketContainer = (props) => {
       transferFromDelay={props.transferFromDelay}
       transferItemFromDelay={transferItemFromDelay}
       transferItemFromActive={transferItemFromActive}
+
     />
   );
 };
@@ -53,6 +55,7 @@ const mapStateToProps = (state) => {
     basketActive: state.basket.basket.basketActive,
     basketDelayed: state.basket.basket.basketDelayed,
     delayed: state.basket.delayed,
+
   };
 };
 

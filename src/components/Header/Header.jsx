@@ -5,13 +5,13 @@ import HeaderContact from "./HeaderContact/HeaderContact";
 import HeaderFind from "./HeaderFind/HeaderFind";
 import HeaderNavBarContainer from "./HeaderNavBar/HeaderNavBarContainer";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className={S.body}>
       <HeaderInfo />
       <div className={`${S.headerContainer} container`}>
         <HeaderContact />
-        <HeaderFind />
+        <HeaderFind  countItem={props.countItem}/>
       </div>
       <HeaderNavBarContainer />
     </div>

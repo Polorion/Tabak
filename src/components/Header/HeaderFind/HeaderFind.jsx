@@ -5,7 +5,7 @@ import S from "./HeaderFind.module.scss";
 import MyButton from "../../UI/MyButton/MyButton";
 import HeaderBasket from "./HeaderBasket/HeaderBasket";
 
-const HeaderFind = () => {
+const HeaderFind = (props) => {
   return (
     <div className={S.body}>
       <div className={S.logo}>
@@ -21,7 +21,7 @@ const HeaderFind = () => {
           <input type="text" placeholder={"поиск товаров"} />
         </div>
       </div>
-      <HeaderBasket />
+      <HeaderBasket countItem={props.countItem}/>
       <div className={S.btnLogin}>
         <MyButton title={"Login"} />
       </div>

@@ -60,14 +60,14 @@ const initialState = {
       {
         title: "Фильтры сигаретные Cartel Slim Long 6/22 100",
         article: " OP200001843",
-        price: "40",
+        price: 40,
         count: 10,
         id: 1,
       },
       {
         title: "Lorem lorem dsadsasda",
         article: " 1937820",
-        price: "428",
+        price: 428,
         count: 10,
         id: 2,
       },
@@ -76,14 +76,14 @@ const initialState = {
       {
         title: "dsadsdsa",
         article: " OP200001843",
-        price: "40",
+        price: 40,
         count: 10,
         id: 3,
       },
       {
         title: "dasdsa",
         article: " 1937820",
-        price: "428",
+        price: 428,
         count: 10,
         id: 4,
       },
