@@ -2,19 +2,32 @@ import * as React from "react";
 import Basket from "./Basket";
 import { connect } from "react-redux";
 import {
-  deleteItem,
-  SetCountItem,
-  setDelayed,
+  deleteItemActive, deleteItemDalay,
+  SetCountItemActive, SetCountItemDeley,
+  setDelayed, transferFromActive,
   transferFromDelay,
 } from "../../../store/BasketReduser";
 
 const BasketContainer = (props) => {
-  const upCount = (id, t) => {
-    props.SetCountItem(id, t);
+
+  const setCountActive = (id, t) => {
+    props.SetCountItemActive(id, t);
   };
-  const del = (id) => {
-    props.deleteItem(id);
+  const setCountDelay = (id, t) => {
+    props.SetCountItemDeley(id, t);
   };
+  const delActive = (id) => {
+    props.deleteItemActive(id);
+  };
+  const delDelay=(id)=>{
+    props.deleteItemDalay(id)
+  }
+  const transferItemFromDelay=(id)=>{
+    props.transferFromDelay(id)
+  }
+  const transferItemFromActive=(id)=>{
+    props.transferFromActive(id)
+  }
 
   return (
     <Basket
@@ -22,11 +35,15 @@ const BasketContainer = (props) => {
         basketActive: props.basketActive,
         basketDelayed: props.basketDelayed,
       }}
-      upCount={upCount}
-      del={del}
+      setCountActive={setCountActive}
+      setCountDelay={setCountDelay}
+      delActive={delActive}
+      delDelay={delDelay}
       delayed={props.delayed}
       setDelayed={props.setDelayed}
       transferFromDelay={props.transferFromDelay}
+      transferItemFromDelay={transferItemFromDelay}
+      transferItemFromActive={transferItemFromActive}
     />
   );
 };
@@ -40,8 +57,11 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-  SetCountItem,
-  deleteItem,
+  SetCountItemActive,
+  deleteItemDalay,
+  SetCountItemDeley,
+  transferFromActive,
+  deleteItemActive,
   setDelayed,
-  transferFromDelay,
+  transferFromDelay
 })(BasketContainer);

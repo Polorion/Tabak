@@ -5,7 +5,6 @@ import GeneratorRandomString from "../../../../utils/GeneratorRandomString";
 import { ReactComponent as Arrow } from "../../../../assets/img/arrow.svg";
 
 const HistoryPath = (props) => {
-  console.log(props);
   // const location = useLocation();
   // const paths = location.pathname.split("/");
   // let path = "";

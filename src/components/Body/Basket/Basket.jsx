@@ -5,7 +5,6 @@ import BtnControl from "./BtnControl/BtnControl";
 import Item from "./Item/Item";
 import BasketTotal from "./BasketTotal/BasketTotal";
 import GeneratorRandomString from "../../../utils/GeneratorRandomString";
-import { setDelayed, transferFromDelay } from "../../../store/BasketReduser";
 
 const Basket = (props) => {
   const basket = props.delayed
@@ -31,15 +30,18 @@ const Basket = (props) => {
                 return (
                   <Item
                     key={GeneratorRandomString()}
-                    upCount={props.upCount}
+                    setCountActive={props.setCountActive}
+                    setCountDelay={props.setCountDelay}
                     title={el.title}
                     article={el.article}
                     price={el.price}
                     count={el.count}
                     id={el.id}
-                    del={props.del}
+                    delActive={props.delActive}
+                    delDelay={props.delDelay}
                     delayed={props.delayed}
-                    transferFromDelay={props.transferFromDelay}
+                    transferItemFromDelay={props.transferItemFromDelay}
+                    transferItemFromActive={props.transferItemFromActive}
                   />
                 );
               })}

@@ -11,14 +11,30 @@ import { transferFromDelay } from "../../../../store/BasketReduser";
 const Item = (props) => {
   const totalPrice = props.count * props.price;
   const handlerUp = () => {
-    props.upCount(props.id, "up");
+    props.setCountActive(props.id, "up");
+  };
+  const handlerUpDelay = () => {
+    props.setCountDelay(props.id, "up");
   };
   const handlerDown = () => {
-    props.count > 0 && props.upCount(props.id, "down");
+    props.count > 0 && props.setCountActive(props.id, "down");
   };
-  const handlerDelete = () => {
-    props.del(props.id);
+  const handlerDownDelay = () => {
+    props.count > 0 && props.setCountDelay(props.id, "down");
   };
+  const handlerDeleteActive = () => {
+    props.delActive(props.id);
+  };
+  const handlerDeleteDelay = () => {
+    props.delDelay(props.id);
+  };
+  const  transferItemFromDelay=()=>{
+   props.transferItemFromDelay(props.id)
+  }
+
+  const transferItemFromActive=()=>{
+   props.transferItemFromActive(props.id)
+  }
 
   return (
     <div className={S.bodyTable}>
@@ -33,11 +49,11 @@ const Item = (props) => {
       </div>
       <div className={S.price}>{props.price}</div>
       <div className={S.count}>
-        <button onClick={handlerUp} className={S.btn}>
+        <button onClick={props.delayed ?handlerUp:handlerUpDelay} className={S.btn}>
           +
         </button>
         <div className={S.countItem}>{props.count}</div>
-        <button onClick={handlerDown} className={S.btn}>
+        <button onClick={props.delayed ?handlerDown: handlerDownDelay} className={S.btn}>
           -
         </button>
       </div>
@@ -47,13 +63,13 @@ const Item = (props) => {
           text={"Удалить"}
           id={props.id}
           img={Garbage}
-          action={handlerDelete}
+          action={props.delayed?handlerDeleteActive:handlerDeleteDelay}
         />
         <MiniBtn
           text={props.delayed ? "отложить" : "вложить"}
           id={props.id}
           img={Flag}
-          action={props.transferFromDelay}
+          action={props.delayed?transferItemFromDelay:transferItemFromActive}
         />
         {props.delayed && (
           <MiniBtn text={"Сравнить"} id={props.id} img={Compare} />
