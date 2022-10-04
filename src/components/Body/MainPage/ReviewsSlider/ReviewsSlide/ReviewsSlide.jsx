@@ -6,10 +6,7 @@ import MyButton from "../../../../UI/MyButton/MyButton";
 const ReviewsSlide = (props) => {
   return (
     <div className={S.body}>
-      <div className={S.infoItem}>
-        Отзыв о товаре Зажигалка для трубки Евроджет кремниевая 25701
-      </div>
-
+      <div className={S.infoItem}>Lorem ipsum dolor sit.</div>
       <div className={S.rewiewsBody}>
         <div className={S.rewiewsImg}>
           <img src={props.img} alt="" />

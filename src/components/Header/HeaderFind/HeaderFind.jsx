@@ -1,5 +1,5 @@
 import * as React from "react";
-import logo from "../../../assets/img/logo.png";
+import logo from "../../../assets/img/18.svg";
 import { ReactComponent as Basket } from "../../../assets/img/basket.svg";
 import S from "./HeaderFind.module.scss";
 import MyButton from "../../UI/MyButton/MyButton";
@@ -21,7 +21,7 @@ const HeaderFind = (props) => {
           <input type="text" placeholder={"поиск товаров"} />
         </div>
       </div>
-      <HeaderBasket countItem={props.countItem}/>
+      <HeaderBasket countItem={props.countItem} />
       <div className={S.btnLogin}>
         <MyButton title={"Login"} />
       </div>

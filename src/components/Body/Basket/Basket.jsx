@@ -37,6 +37,7 @@ const Basket = (props) => {
                     price={el.price}
                     count={el.count}
                     id={el.id}
+                    img={el.img}
                     delActive={props.delActive}
                     delDelay={props.delDelay}
                     delayed={props.delayed}
@@ -47,7 +48,7 @@ const Basket = (props) => {
               })}
             </div>
           </div>
-          <BasketTotal  />
+          <BasketTotal />
         </div>
       </div>
     </PathHistory>

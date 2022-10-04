@@ -9,6 +9,7 @@ import GeneratorRandomString from "../../../../utils/GeneratorRandomString";
 import { transferFromDelay } from "../../../../store/BasketReduser";
 
 const Item = (props) => {
+  console.log(props.img);
   const totalPrice = props.count * props.price;
   const handlerUp = () => {
     props.setCountActive(props.id, "up");
@@ -28,19 +29,19 @@ const Item = (props) => {
   const handlerDeleteDelay = () => {
     props.delDelay(props.id);
   };
-  const  transferItemFromDelay=()=>{
-   props.transferItemFromDelay(props.id)
-  }
+  const transferItemFromDelay = () => {
+    props.transferItemFromDelay(props.id);
+  };
 
-  const transferItemFromActive=()=>{
-   props.transferItemFromActive(props.id)
-  }
+  const transferItemFromActive = () => {
+    props.transferItemFromActive(props.id);
+  };
 
   return (
     <div className={S.bodyTable}>
       <div className={S.item}>
         <div className={S.itemImg}>
-          <img src={img} alt="" />
+          <img src={props.img ? props.img : img} alt="" />
         </div>
         <div className={S.itemInfo}>
           <div className={S.infoTitle}>{props.title}</div>
@@ -49,11 +50,17 @@ const Item = (props) => {
       </div>
       <div className={S.price}>{props.price}</div>
       <div className={S.count}>
-        <button onClick={props.delayed ?handlerUp:handlerUpDelay} className={S.btn}>
+        <button
+          onClick={props.delayed ? handlerUp : handlerUpDelay}
+          className={S.btn}
+        >
           +
         </button>
         <div className={S.countItem}>{props.count}</div>
-        <button onClick={props.delayed ?handlerDown: handlerDownDelay} className={S.btn}>
+        <button
+          onClick={props.delayed ? handlerDown : handlerDownDelay}
+          className={S.btn}
+        >
           -
         </button>
       </div>
@@ -63,13 +70,15 @@ const Item = (props) => {
           text={"Удалить"}
           id={props.id}
           img={Garbage}
-          action={props.delayed?handlerDeleteActive:handlerDeleteDelay}
+          action={props.delayed ? handlerDeleteActive : handlerDeleteDelay}
         />
         <MiniBtn
           text={props.delayed ? "отложить" : "вложить"}
           id={props.id}
           img={Flag}
-          action={props.delayed?transferItemFromDelay:transferItemFromActive}
+          action={
+            props.delayed ? transferItemFromDelay : transferItemFromActive
+          }
         />
         {props.delayed && (
           <MiniBtn text={"Сравнить"} id={props.id} img={Compare} />

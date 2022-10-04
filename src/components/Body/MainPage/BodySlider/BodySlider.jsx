@@ -1,10 +1,10 @@
 import "./Slider.scss";
 import * as React from "react";
 import S from "./BodySlider.module.scss";
-import IMG0 from "../../../../assets/img/sliderIMG/sigar.jpg";
-import IMG1 from "../../../../assets/img/sliderIMG/sigas.jpg";
-import IMG2 from "../../../../assets/img/sliderIMG/moreSigas.jpg";
-import IMG3 from "../../../../assets/img/sliderIMG/tabak.jpg";
+import IMG0 from "../../../../assets/img/imgfor/big.jfif";
+import IMG1 from "../../../../assets/img/imgfor/big.jfif";
+import IMG2 from "../../../../assets/img/imgfor/big.jfif";
+import IMG3 from "../../../../assets/img/imgfor/big.jfif";
 import Slide from "./Slide/Slide";
 import SimpleSlider from "../../../UI/Slider/Slider";
 import GeneratorRandomString from "../../../../utils/GeneratorRandomString";

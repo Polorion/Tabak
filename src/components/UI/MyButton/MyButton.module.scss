@@ -8,7 +8,7 @@
   transform-style: preserve-3d;
   position: relative;
   z-index: 2;
-
+  width: 100%;
   color: var(--ligthgray);
 
   &:hover {
@@ -16,18 +16,17 @@
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     &:after {
-      transform: translate(110%);
+      right: -10px;
     }
   }
   &:after {
     content: "";
     position: absolute;
     top: 0%;
-    left: -10%;
-    width: 110%;
+    right: 0px;
+    width: 10px;
     height: 100%;
     background-color: var(--lightblue);
-    transform: translate(90%);
     transition: all 1s ease;
   }
 }

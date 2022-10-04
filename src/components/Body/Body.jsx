@@ -4,7 +4,6 @@ import MainPage from "./MainPage/MainPage";
 import { Route, Routes } from "react-router-dom";
 import Catalog from "./Catalog/Catalog";
 import BasketContainer from "./Basket/BasketContainer";
-
 const Body = () => {
   return (
     <Routes>

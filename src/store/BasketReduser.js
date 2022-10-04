@@ -5,7 +5,14 @@ const DELETE_ITEM_DELAY = "DELETE_ITEM_DELAY";
 const SET_DELAYED = "SET_DELAYED";
 const TRANSFER_FROM_ACTIVE = "TRANSFER_FROM_ACTIVE";
 const TRANSFER_FROM_DELAY = "TRANSFER_FROM_DELAY";
+const TRANSFER_IN_BASKET = "TRANSFER_IN_BASKET";
 
+export const transferInBasket = (obj) => {
+  return {
+    type: TRANSFER_IN_BASKET,
+    obj,
+  };
+};
 export const transferFromActive = (id) => {
   return {
     type: TRANSFER_FROM_ACTIVE,
@@ -32,7 +39,8 @@ export const SetCountItemActive = (id, move) => {
     id,
     move,
   };
-};export const SetCountItemDeley = (id, move) => {
+};
+export const SetCountItemDeley = (id, move) => {
   return {
     type: UP_COUNT_DELAY,
     id,
@@ -96,8 +104,9 @@ const BasketReduser = (state = initialState, action) => {
     case UP_COUNT_ACTION:
       return {
         ...state,
-        basket:{...state.basket,
-          basketActive:[
+        basket: {
+          ...state.basket,
+          basketActive: [
             ...state.basket.basketActive.map((el) => {
               if (el.id === action.id) {
                 if (action.move === "up") {
@@ -108,13 +117,15 @@ const BasketReduser = (state = initialState, action) => {
               }
               return el;
             }),
-          ],}
+          ],
+        },
       };
-      case UP_COUNT_DELAY:
+    case UP_COUNT_DELAY:
       return {
         ...state,
-        basket:{...state.basket,
-          basketDelayed:[
+        basket: {
+          ...state.basket,
+          basketDelayed: [
             ...state.basket.basketDelayed.map((el) => {
               if (el.id === action.id) {
                 if (action.move === "up") {
@@ -125,46 +136,49 @@ const BasketReduser = (state = initialState, action) => {
               }
               return el;
             }),
-          ],}
+          ],
+        },
       };
     case TRANSFER_FROM_DELAY:
       const findItemActive = state.basket.basketActive.filter(
         (el) => el.id === action.id
       );
-console.log(findItemActive)
+
       return {
         ...state,
         basket: {
           ...state.basket,
-          basketDelayed: [
-
-            ...state.basket.basketDelayed,...findItemActive
-          ],
+          basketDelayed: [...state.basket.basketDelayed, ...findItemActive],
           basketActive: [
-            ...state.basket.basketActive.filter(el=>{
-              return el.id!==action.id
-            })
-          ]
+            ...state.basket.basketActive.filter((el) => {
+              return el.id !== action.id;
+            }),
+          ],
         },
       };
-      case TRANSFER_FROM_ACTIVE:
+    case TRANSFER_FROM_ACTIVE:
       const findItemDelay = state.basket.basketDelayed.filter(
         (el) => el.id === action.id
-
       );
+      console.log();
       return {
         ...state,
         basket: {
           ...state.basket,
           basketDelayed: [
-            ...state.basket.basketDelayed.filter(el=>{
-              return el.id!==action.id
-            })
+            ...state.basket.basketDelayed.filter((el) => {
+              return el.id !== action.id;
+            }),
           ],
-          basketActive: [
-            ...state.basket.basketActive,...findItemDelay
-
-          ]
+          basketActive: [...state.basket.basketActive, ...findItemDelay],
+        },
+      };
+    case TRANSFER_IN_BASKET:
+      return {
+        ...state,
+        basket: {
+          ...state.basket,
+          basketActive: [...state.basket.basketActive, action.obj],
         },
       };
     case SET_DELAYED:
@@ -172,22 +186,26 @@ console.log(findItemActive)
     case DELETE_ITEM_ACTIVE:
       return {
         ...state,
-        basket:{...state.basket,
+        basket: {
+          ...state.basket,
           basketActive: [
             ...state.basket.basketActive.filter((el) => {
               return el.id !== action.id;
             }),
-          ],}
+          ],
+        },
       };
-      case DELETE_ITEM_DELAY:
+    case DELETE_ITEM_DELAY:
       return {
         ...state,
-        basket:{...state.basket,
+        basket: {
+          ...state.basket,
           basketDelayed: [
             ...state.basket.basketDelayed.filter((el) => {
               return el.id !== action.id;
             }),
-          ],}
+          ],
+        },
       };
     default:
       return { ...state };
@@ -195,5 +213,3 @@ console.log(findItemActive)
 };
 
 export default BasketReduser;
-
-

@@ -1,76 +1,76 @@
 import * as React from "react";
 import S from "./Manufacturers.module.scss";
-import img from "../../../../assets/img/sliderIMG/sigas.jpg";
+import img from "../../../../assets/img/imgfor/small.png";
 import SimpleSlider from "../../../UI/Slider/Slider";
 import ManufacturersSlide from "./ManufacturersSlide/ManufacturersSlide";
 
 const Manufacturers = (props) => {
   const slide = [
     {
-      info: "Сеточки д/трубок 17 мм ST17",
+      info: "lorem  ",
       img: img,
       stars: 2,
       price: 34,
       id: 13231,
     },
     {
-      info: "Сеточки д/трубок 17 мм ST17",
+      info: "lorem  ",
       img: img,
       stars: 2,
       price: 34,
       id: 11233,
     },
     {
-      info: "Сеточки д/трубок 17 мм ST17",
+      info: "lorem  ",
       img: img,
       stars: 2,
       price: 34,
       id: 133,
     },
     {
-      info: "Сеточки д/трубок 17 мм ST17",
+      info: "lorem  ",
       img: img,
       stars: 2,
       price: 34,
       id: 1213,
     },
     {
-      info: "Сеточки д/трубок 17 мм ST17",
+      info: "lorem  ",
       img: img,
       stars: 2,
       price: 34,
       id: 152,
     },
     {
-      info: "Сеточки д/трубок 17 мм ST17",
+      info: "lorem  ",
       img: img,
       stars: 2,
       price: 34,
       id: 15,
     },
     {
-      info: "Сеточки д/трубок 17 мм ST17",
+      info: "lorem  ",
       img: img,
       stars: 2,
       price: 34,
       id: 11,
     },
     {
-      info: "Сеточки д/трубок 17 мм ST17",
+      info: "lorem  ",
       img: img,
       stars: 2,
       price: 34,
       id: 14,
     },
     {
-      info: "Сеточки д/трубок 17 мм ST17",
+      info: "lorem  ",
       img: img,
       stars: 2,
       price: 34,
       id: 13,
     },
     {
-      info: "Сеточки д/трубок 17 мм ST17",
+      info: "lorem  ",
       img: img,
       stars: 2,
       price: 34,

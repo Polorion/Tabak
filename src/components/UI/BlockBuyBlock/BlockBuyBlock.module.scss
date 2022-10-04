@@ -1,0 +1,19 @@
+.body {
+  display: flex;
+  .upOrDown {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .count {
+      padding: 0 10px;
+    }
+    button {
+      padding: 10px;
+
+      &:last-child {
+        margin-left: 10px;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -6,12 +6,12 @@ import GeneratorRandomString from "../../../utils/GeneratorRandomString";
 
 const navbar = [
   {
-    title: "Табак",
+    title: "lorem",
     img: true,
     type: 0,
     section: [
       {
-        title: "Сигареты",
+        title: "lorem",
         total: 100,
         path: "sigaret",
         firma: [
@@ -21,7 +21,7 @@ const navbar = [
         ],
       },
       {
-        title: "Сигареты",
+        title: "lorem",
         total: 100,
         path: "sigaret",
         firma: [
@@ -82,7 +82,7 @@ const navbar = [
     ],
   },
   {
-    title: "Тавары для Курения",
+    title: "lorem",
     img: false,
     type: 1,
     section: [
@@ -112,7 +112,7 @@ const navbar = [
     ],
   },
   {
-    title: "Табаки и Мундштуки",
+    title: "lorem",
     img: false,
     type: 2,
     section: [
@@ -188,7 +188,7 @@ const navbar = [
     ],
   },
   {
-    title: "Кальяны",
+    title: "lorem",
     img: true,
     type: 3,
     section: [
@@ -218,7 +218,7 @@ const navbar = [
     ],
   },
   {
-    title: "Зажигалки",
+    title: "lorem",
     img: false,
     type: 4,
     section: [
@@ -248,7 +248,7 @@ const navbar = [
     ],
   },
   {
-    title: "Электронные испарители",
+    title: "lorem ",
     img: true,
     type: 5,
     section: [
@@ -278,7 +278,7 @@ const navbar = [
     ],
   },
   {
-    title: "Сувениры и продукты",
+    title: "lorem",
     img: false,
     type: 6,
     section: [
@@ -354,7 +354,7 @@ const navbar = [
     ],
   },
   {
-    title: "Алкоголь",
+    title: "lorem",
     img: true,
     type: 7,
     section: [

@@ -1,10 +1,10 @@
 import * as React from "react";
 import S from "./MainPage.module.scss";
 import BodySlider from "./BodySlider/BodySlider";
-import ItemSlider from "./ItemSlider/ItemSlider";
 import ReviewsSlider from "./ReviewsSlider/ReviewsSlider";
 import Manufacturers from "./ManufacturersSlider/Manufacturers";
-import TotalPriceBasket from "../../../HOC/TotalPriceBasket/TotalPriceBasket";
+import ItemSliderContainerPopular from "./ItemSlider/ItemSliderContainerPopular";
+import ItemSliderContainerNew from "./ItemSlider/ItemSliderContainerNew";
 
 const MainPage = (props) => {
   return (
@@ -12,8 +12,8 @@ const MainPage = (props) => {
       <BodySlider />
       <div className={S.slidersItems}></div>
       <div className={`${S.content} `}>
-        <ItemSlider title={"Новые"} />
-        <ItemSlider title={"Популярные"} />
+        <ItemSliderContainerNew />
+        <ItemSliderContainerPopular />
         <ReviewsSlider title={"Отзовы"} />
         <Manufacturers title={"Производители"} />
       </div>
@@ -21,4 +21,4 @@ const MainPage = (props) => {
   );
 };
 
-export default MainPage
+export default MainPage;
