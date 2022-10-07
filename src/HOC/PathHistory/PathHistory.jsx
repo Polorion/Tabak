@@ -12,6 +12,7 @@ const PathHistory = ({ children }) => {
   const reName = [
     { name: "sigaret", reName: "Сигареты" },
     { name: "basket", reName: "Карзина" },
+    { name: "Compare", reName: "Сравнить" },
   ];
   paths = paths.map((el) => {
     return reName.map((elRe) => {

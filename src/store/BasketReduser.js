@@ -5,12 +5,26 @@ const DELETE_ITEM_DELAY = "DELETE_ITEM_DELAY";
 const SET_DELAYED = "SET_DELAYED";
 const TRANSFER_FROM_ACTIVE = "TRANSFER_FROM_ACTIVE";
 const TRANSFER_FROM_DELAY = "TRANSFER_FROM_DELAY";
+const TRANSFER_FROM_COMPARE = "TRANSFER_FROM_COMPARE";
 const TRANSFER_IN_BASKET = "TRANSFER_IN_BASKET";
+const DELETE_IN_COMPARE = "DELETE_IN_COMPARE";
 
 export const transferInBasket = (obj) => {
   return {
     type: TRANSFER_IN_BASKET,
     obj,
+  };
+};
+export const transferFromCompare = (obj) => {
+  return {
+    type: TRANSFER_FROM_COMPARE,
+    obj,
+  };
+};
+export const deleteInCompare = (id) => {
+  return {
+    type: DELETE_IN_COMPARE,
+    id,
   };
 };
 export const transferFromActive = (id) => {
@@ -63,6 +77,20 @@ export const deleteItemDalay = (id) => {
 
 const initialState = {
   delayed: true,
+  compare: [
+    {
+      title: "Фильтры сигаретные Cartel Slim Long 6/22 100",
+      article: " OP200001843",
+      price: 40,
+      count: 10,
+      id: 1,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
+    },
+  ],
   basket: {
     basketActive: [
       {
@@ -71,6 +99,11 @@ const initialState = {
         price: 40,
         count: 10,
         id: 1,
+        settings: {
+          test: 1234,
+          ttest: 1234,
+          tttest: 1234,
+        },
       },
       {
         title: "Lorem lorem dsadsasda",
@@ -78,6 +111,11 @@ const initialState = {
         price: 428,
         count: 10,
         id: 2,
+        settings: {
+          test: 1234,
+          ttest: 1234,
+          tttest: 1234,
+        },
       },
     ],
     basketDelayed: [
@@ -87,6 +125,11 @@ const initialState = {
         price: 40,
         count: 10,
         id: 3,
+        settings: {
+          test: 1234,
+          ttest: 1234,
+          tttest: 1234,
+        },
       },
       {
         title: "dasdsa",
@@ -94,6 +137,11 @@ const initialState = {
         price: 428,
         count: 10,
         id: 4,
+        settings: {
+          test: 1234,
+          ttest: 1234,
+          tttest: 1234,
+        },
       },
     ],
   },
@@ -180,6 +228,16 @@ const BasketReduser = (state = initialState, action) => {
           ...state.basket,
           basketActive: [...state.basket.basketActive, action.obj],
         },
+      };
+    case DELETE_IN_COMPARE:
+      return {
+        ...state,
+        compare: [...state.compare.filter((el) => el.id !== action.id)],
+      };
+    case TRANSFER_FROM_COMPARE:
+      return {
+        ...state,
+        compare: [...state.compare, action.obj],
       };
     case SET_DELAYED:
       return { ...state, delayed: action.done };

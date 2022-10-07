@@ -5,11 +5,8 @@ import MiniBtn from "../../../UI/MiniBtn/MiniBtn";
 import { ReactComponent as Garbage } from "../../../../assets/img/miniBtn/garbage.svg";
 import { ReactComponent as Flag } from "../../../../assets/img/miniBtn/flag.svg";
 import { ReactComponent as Compare } from "../../../../assets/img/miniBtn/sravnit.svg";
-import GeneratorRandomString from "../../../../utils/GeneratorRandomString";
-import { transferFromDelay } from "../../../../store/BasketReduser";
 
 const Item = (props) => {
-  console.log(props.img);
   const totalPrice = props.count * props.price;
   const handlerUp = () => {
     props.setCountActive(props.id, "up");
@@ -35,6 +32,9 @@ const Item = (props) => {
 
   const transferItemFromActive = () => {
     props.transferItemFromActive(props.id);
+  };
+  const goToCompare = () => {
+    props.goToCompare(props.el);
   };
 
   return (
@@ -81,7 +81,12 @@ const Item = (props) => {
           }
         />
         {props.delayed && (
-          <MiniBtn text={"Сравнить"} id={props.id} img={Compare} />
+          <MiniBtn
+            text={"Сравнить"}
+            id={props.id}
+            img={Compare}
+            action={goToCompare}
+          />
         )}
       </div>
     </div>

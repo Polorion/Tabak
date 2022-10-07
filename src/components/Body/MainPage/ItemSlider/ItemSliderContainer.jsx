@@ -5,23 +5,25 @@ import {
   deleteItemActive,
   deleteItemDalay,
   transferFromActive,
+  transferFromCompare,
   transferFromDelay,
   transferInBasket,
 } from "../../../../store/BasketReduser";
+import GoToCompare from "../../../../HOC/GoToCompare/GoToCompare";
 
-const ItemSliderContainerNew = (props) => {
+const ItemSliderContainer = (props) => {
   const goItemToBasket = (obj) => {
-    let test = props.itemInBasketActive.map((el) => {
+    let findItems = props.itemInBasketActive.map((el) => {
       return el.id === obj.id;
     });
-    test = [
-      ...test,
+    findItems = [
+      ...findItems,
       ...props.itemInBasketDelay.map((el) => {
         return el.id === obj.id;
       }),
     ];
 
-    if (!test.includes(true)) {
+    if (!findItems.includes(true)) {
       props.transferInBasket(obj);
     } else {
       props.deleteItemDalay(obj.id);
@@ -31,23 +33,25 @@ const ItemSliderContainerNew = (props) => {
   };
   return (
     <ItemSlider
-      title={"Новые"}
-      items={props.items}
       goItemToBasket={goItemToBasket}
+      title={props.title}
+      items={props.items}
+      goItemToCompare={props.goItemToCompare}
     />
   );
 };
 const mapDispatchToProps = (state) => {
   return {
-    items: state.mainPage.sliderNewPosition,
     itemInBasketActive: state.basket.basket.basketActive,
     itemInBasketDelay: state.basket.basket.basketDelayed,
   };
 };
 
-export default connect(mapDispatchToProps, {
-  transferInBasket,
-  transferFromActive,
-  deleteItemActive,
-  deleteItemDalay,
-})(ItemSliderContainerNew);
+export default GoToCompare(
+  connect(mapDispatchToProps, {
+    transferInBasket,
+    transferFromActive,
+    deleteItemActive,
+    deleteItemDalay,
+  })(ItemSliderContainer)
+);

@@ -1,10 +1,10 @@
 import * as React from "react";
 import S from "./Basket.module.scss";
-import PathHistory from "../PathHistory/PathHistory";
 import BtnControl from "./BtnControl/BtnControl";
 import Item from "./Item/Item";
 import BasketTotal from "./BasketTotal/BasketTotal";
 import GeneratorRandomString from "../../../utils/GeneratorRandomString";
+import PathHistory from "../../../HOC/PathHistory/PathHistory";
 
 const Basket = (props) => {
   const basket = props.delayed
@@ -30,6 +30,7 @@ const Basket = (props) => {
                 return (
                   <Item
                     key={GeneratorRandomString()}
+                    el={el}
                     setCountActive={props.setCountActive}
                     setCountDelay={props.setCountDelay}
                     title={el.title}
@@ -43,6 +44,7 @@ const Basket = (props) => {
                     delayed={props.delayed}
                     transferItemFromDelay={props.transferItemFromDelay}
                     transferItemFromActive={props.transferItemFromActive}
+                    goToCompare={props.goToCompare}
                   />
                 );
               })}

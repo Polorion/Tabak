@@ -1,4 +1,4 @@
-import img from "../assets/img/imgfor/small.png";
+import img from "../assets/img/sliderIMG/sigas.jpg";
 
 const SET_OPEN_WINDOW_BAR = "SET_OPEN_WINDOW_BAR";
 
@@ -21,6 +21,11 @@ const initialState = {
       price: 34,
       id: 2,
       count: 1,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
     },
     {
       title: "popular",
@@ -30,15 +35,26 @@ const initialState = {
       price: 34,
       id: 3,
       count: 3,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
     },
     {
       title: "popular",
       article: "lorem",
       img: img,
       stars: 2,
+
       price: 34,
       id: 4,
       count: 4,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
     },
     {
       title: "popular",
@@ -48,6 +64,11 @@ const initialState = {
       price: 34,
       id: 5,
       count: 1,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
     },
     {
       title: "popular",
@@ -57,6 +78,11 @@ const initialState = {
       price: 34,
       id: 7,
       count: 5,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
     },
   ],
   sliderPopularPosition: [
@@ -68,6 +94,11 @@ const initialState = {
       article: "lorem",
       id: 321,
       count: 1,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
     },
     {
       title: "popular",
@@ -77,6 +108,11 @@ const initialState = {
       price: 34,
       id: 12,
       count: 3,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
     },
     {
       title: "popular",
@@ -86,6 +122,11 @@ const initialState = {
       price: 34,
       id: 123,
       count: 4,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
     },
     {
       title: "popular",
@@ -95,6 +136,11 @@ const initialState = {
       price: 34,
       id: 3,
       count: 1,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
     },
     {
       title: "popular",
@@ -104,6 +150,11 @@ const initialState = {
       price: 34,
       id: 1112,
       count: 5,
+      settings: {
+        test: 1234,
+        ttest: 1234,
+        tttest: 1234,
+      },
     },
   ],
 };

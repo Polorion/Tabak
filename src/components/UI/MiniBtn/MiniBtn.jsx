@@ -4,6 +4,7 @@ import { useState } from "react";
 import { transferFromDelay } from "../../../store/BasketReduser";
 
 const MiniBtn = (props) => {
+  console.log(props.id);
   const [active, setActive] = useState(false);
 
   const mouseActive = () => {

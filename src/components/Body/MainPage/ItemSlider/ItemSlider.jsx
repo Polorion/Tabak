@@ -15,15 +15,17 @@ const ItemSlider = (props) => {
         watch={5}
         auto={false}
       >
-        {props.items.map((el) => {
-          return (
-            <ItemInSlide
-              el={el}
-              key={el.id}
-              goItemToBasket={props.goItemToBasket}
-            />
-          );
-        })}
+        {props.items &&
+          props.items.map((el) => {
+            return (
+              <ItemInSlide
+                el={el}
+                key={el.id}
+                goItemToBasket={props.goItemToBasket}
+                goItemToCompare={props.goItemToCompare}
+              />
+            );
+          })}
       </SimpleSlider>
     </div>
   );
