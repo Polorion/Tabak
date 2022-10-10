@@ -14,7 +14,7 @@ const initialState = {
   openWindowNavBar: false,
   sliderNewPosition: [
     {
-      title: "popular",
+      title: "qqwq",
       article: "lorem",
       img: img,
       stars: 2,
@@ -28,7 +28,7 @@ const initialState = {
       },
     },
     {
-      title: "popular",
+      title: "qqq",
       article: "lorem",
       img: img,
       stars: 2,
@@ -42,7 +42,7 @@ const initialState = {
       },
     },
     {
-      title: "popular",
+      title: "eee",
       article: "lorem",
       img: img,
       stars: 2,
@@ -57,7 +57,7 @@ const initialState = {
       },
     },
     {
-      title: "popular",
+      title: "rrr",
       article: "lorem",
       img: img,
       stars: 2,
@@ -71,7 +71,7 @@ const initialState = {
       },
     },
     {
-      title: "popular",
+      title: "ttt",
       article: "lorem",
       img: img,
       stars: 2,

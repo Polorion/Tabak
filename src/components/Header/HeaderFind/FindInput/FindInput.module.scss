@@ -1,0 +1,31 @@
+.input {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .findList {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    background-color: #fff;
+    overflow-y: auto;
+    z-index: 1000;
+    max-height: 300px;
+    transition: all 3s ease;
+    border-radius: 10px;
+    .none {
+      padding: 30px;
+    }
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px solid var(--lightblue);
+    border-right: 1px solid var(--lightblue);
+    border-bottom: 1px solid var(--lightblue);
+  }
+}

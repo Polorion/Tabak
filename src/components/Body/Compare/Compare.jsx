@@ -5,7 +5,6 @@ import ItemCompare from "./ItemCompare/ItemCompare";
 import GeneratorRandomString from "../../../utils/GeneratorRandomString";
 
 const Compare = (props) => {
-  console.log(props);
   const listIsNull = props.items.length > 0;
   return (
     <PathHistory>

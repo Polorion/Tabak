@@ -14,25 +14,14 @@
     display: flex;
     align-items: center;
     margin-right: 30px;
-    border: 1px solid var(--lightblue);
-    border-radius: 10px;
-    overflow: hidden;
     height: 50px;
     width: 100%;
     .select {
       padding: 0px 10px 0 20px;
       height: 100%;
-      border-right: 1px solid var(--lightblue);
-    }
-    .input {
-      height: 100%;
-      width: 100%;
-
-      input {
-        height: 100%;
-        width: 100%;
-        padding: 0 20px;
-      }
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border: 1px solid var(--lightblue);
     }
   }
 }

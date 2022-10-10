@@ -4,8 +4,14 @@
     display: flex;
     align-items: center;
     width: 100%;
+    .control {
+      max-width: 30px;
+      width: 100%;
+    }
+
     .count {
-      padding: 0 10px;
+      width: 90px;
+      text-align: center;
     }
     button {
       padding: 10px;

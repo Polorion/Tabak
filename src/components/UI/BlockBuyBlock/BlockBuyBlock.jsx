@@ -19,9 +19,13 @@ const BlockBuyBlock = (props) => {
   return (
     <div className={S.body}>
       <div className={S.upOrDown}>
-        <button onClick={downCount}>-</button>
+        <button className={S.control} onClick={downCount}>
+          -
+        </button>
         <div className={S.count}>{count}</div>
-        <button onClick={upCount}>+</button>
+        <button className={S.control} onClick={upCount}>
+          +
+        </button>
         <MyButton action={goItemToBasket} title={"купить"} />
       </div>
     </div>
