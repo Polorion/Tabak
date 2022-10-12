@@ -1,6 +1,6 @@
 import * as React from "react";
 import S from "./Item.module.scss";
-import img from "../../../../assets/img/sliderIMG/tabak.jpg";
+import img from "../../../../assets/img/imgfor/small.png";
 import MiniBtn from "../../../UI/MiniBtn/MiniBtn";
 import { ReactComponent as Garbage } from "../../../../assets/img/miniBtn/garbage.svg";
 import { ReactComponent as Flag } from "../../../../assets/img/miniBtn/flag.svg";

@@ -1,4 +1,4 @@
-import img from "../assets/img/sliderIMG/sigas.jpg";
+import img from "../assets/img/imgfor/small.png";
 
 const SET_OPEN_WINDOW_BAR = "SET_OPEN_WINDOW_BAR";
 
@@ -22,8 +22,8 @@ const initialState = {
       id: 2,
       count: 1,
       settings: {
-        test: 1234,
-        ttest: 1234,
+        tesqwet: 1234,
+        ttttest: 1234,
         tttest: 1234,
       },
     },
@@ -36,9 +36,9 @@ const initialState = {
       id: 3,
       count: 3,
       settings: {
-        test: 1234,
+        teweqst: 1234,
         ttest: 1234,
-        tttest: 1234,
+        ttteeest: 1234,
       },
     },
     {
@@ -52,7 +52,7 @@ const initialState = {
       count: 4,
       settings: {
         test: 1234,
-        ttest: 1234,
+        tewtest: 1234,
         tttest: 1234,
       },
     },
@@ -65,9 +65,9 @@ const initialState = {
       id: 5,
       count: 1,
       settings: {
-        test: 1234,
+        teweqst: 1234,
         ttest: 1234,
-        tttest: 1234,
+        tttwqqeest: 1234,
       },
     },
     {
@@ -79,9 +79,9 @@ const initialState = {
       id: 7,
       count: 5,
       settings: {
-        test: 1234,
+        tewwest: 1234,
         ttest: 1234,
-        tttest: 1234,
+        ttteeqst: 1234,
       },
     },
   ],
@@ -95,8 +95,8 @@ const initialState = {
       id: 321,
       count: 1,
       settings: {
-        test: 1234,
-        ttest: 1234,
+        tessst: 1234,
+        tteqewst: 1234,
         tttest: 1234,
       },
     },
@@ -109,8 +109,8 @@ const initialState = {
       id: 12,
       count: 3,
       settings: {
-        test: 1234,
-        ttest: 1234,
+        testtt: 1234,
+        ttesttt: 1234,
         tttest: 1234,
       },
     },
@@ -123,7 +123,7 @@ const initialState = {
       id: 123,
       count: 4,
       settings: {
-        test: 1234,
+        testst: 1234,
         ttest: 1234,
         tttest: 1234,
       },
@@ -139,7 +139,7 @@ const initialState = {
       settings: {
         test: 1234,
         ttest: 1234,
-        tttest: 1234,
+        tttessttt: 1234,
       },
     },
     {
@@ -151,9 +151,9 @@ const initialState = {
       id: 1112,
       count: 5,
       settings: {
-        test: 1234,
+        tesssest: 1234,
         ttest: 1234,
-        tttest: 1234,
+        tttaaaest: 1234,
       },
     },
   ],
